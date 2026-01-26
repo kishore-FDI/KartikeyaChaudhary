@@ -1,0 +1,95 @@
+.navbar {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 80rem;
+  z-index: 50;
+
+  border-radius: 1rem;
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+/* THIS is what creates the blur */
+.blur {
+  position: absolute;
+  inset: 0;
+
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+
+  /* key: allow sampling only from lower half */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,0.2) 35%,
+    black 60%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,0,0,0.2) 35%,
+    black 60%
+  );
+}
+
+/* dark glass surface */
+.tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.brand {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 2.25rem;
+  font-size: 0.875rem;
+}
+
+.link {
+  color: rgba(255,255,255,0.6);
+  transition: color .2s;
+}
+
+.link:hover {
+  color: white;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta {
+  padding: .6rem 1.25rem;
+  border-radius: 9999px;
+  background: #d9ff00;
+  color: black;
+  font-size: .75rem;
+  font-weight: 500;
+}
