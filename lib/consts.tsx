@@ -8,7 +8,7 @@ export interface Social<TIcon = React.ComponentType<any>> {
 
 export const NavItems = {
   brand: "neomediakey",
-  links: ["Shorts", "Long form", "Why us"],
+  links: ["Why us" , "Shorts", "Long form" ],
   cta: "Book a Call",
   socials: [
     {
@@ -23,3 +23,9 @@ export const NavItems = {
     },
   ] satisfies Social[],
 } as const
+
+export const SHADERCONFIG = {
+  color : "#000000",
+  spread : 0.5,
+  speed : 2
+};

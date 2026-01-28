@@ -1,23 +1,36 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
-
+import { Geist, Geist_Mono, Poppins, Inter_Tight,Manrope  } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ScrollHelper/ScrollEffect";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const interTight = Inter_Tight({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter-tight",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const manrope = Manrope({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-manrope",
 });
 
 export const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["600","700"],
-})
+  weight: ["600", "700"],
+  variable: "--font-poppins",
+});
+
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,17 +39,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          ${interTight.variable}
+          ${poppins.variable}
+          ${manrope.variable}
+          antialiased
+        `}
       >
-        <SmoothScroll>
-        {children}
-        </SmoothScroll>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

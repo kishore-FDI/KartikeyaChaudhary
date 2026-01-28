@@ -76,7 +76,7 @@ export default function Loader({
   const text = "neo.mediakey"
 
   return (
-    <div className="loader fixed inset-0 z-[9999] flex items-center justify-center bg-black">
+    <div className="loader fixed inset-0 z-9999 flex items-center justify-center bg-black">
       <div
         className="loader-word text-white text-6xl font-semibold tracking-tight"
         style={{ fontFamily: "Poppins, sans-serif" }}
