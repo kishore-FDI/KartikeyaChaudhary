@@ -9,7 +9,7 @@ type Props = {
 
 export default function WhyUs({ t1Ref, t2Ref, progressRef }: Props) {
   return (
-    <section className="min-h-screen bg-white px-6 md:px-24">
+    <section className="min-h-screen bg-white px-6 md:px-24" id="whyus">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-20 items-center min-h-screen">
         <div className="md:col-span-5 font-poppins font-semibold text-black
                         text-5xl md:text-7xl lg:text-8xl leading-[1.05] 

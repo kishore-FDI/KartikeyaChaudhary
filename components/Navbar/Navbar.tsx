@@ -73,8 +73,8 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-9 text-md">
           {NavItems.links.map((l, i) => (
-            <a key={i} className="text-white/80 hover:text-white">
-              {l}
+            <a key={i} className="text-white/80 hover:text-white" href={l[1]}>
+              {l[0]}
             </a>
           ))}
         </div>

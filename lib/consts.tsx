@@ -8,7 +8,7 @@ export interface Social<TIcon = React.ComponentType<any>> {
 
 export const NavItems = {
   brand: "neomediakey",
-  links: ["Why us" , "Shorts", "Long form" ],
+  links: [["Why us","#whyus"] , ["Shorts","#shorts"], ["Long form","longform"] ],
   cta: "Book a Call",
   socials: [
     {
