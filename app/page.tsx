@@ -23,17 +23,17 @@ function splitText(el: HTMLElement, mode: "char" | "word") {
     p.innerHTML =
       mode === "char"
         ? text
-            .split("")
-            .map(c =>
-              c === " "
-                ? `<span class="unit">&nbsp;</span>`
-                : `<span class="unit">${c}</span>`
-            )
-            .join("")
+          .split("")
+          .map(c =>
+            c === " "
+              ? `<span class="unit">&nbsp;</span>`
+              : `<span class="unit">${c}</span>`
+          )
+          .join("")
         : text
-            .split(" ")
-            .map(w => `<span class="unit">${w} </span>`)
-            .join("")
+          .split(" ")
+          .map(w => `<span class="unit">${w} </span>`)
+          .join("")
 
     items.push(...Array.from(p.querySelectorAll(".unit")) as HTMLElement[])
   })
@@ -232,7 +232,9 @@ export default function Home() {
         <WhyUs t1Ref={t1Ref} t2Ref={t2Ref} progressRef={progressRef} />
       </div>
 
-      <canvas ref={canvasRef} className="fixed inset-0 z-9999" />
+
+      <canvas ref={canvasRef} className="fixed inset-0 z-50 pointer-events-none" />
+
 
       <Short />
     </main>

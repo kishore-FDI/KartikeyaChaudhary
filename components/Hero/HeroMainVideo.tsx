@@ -86,7 +86,7 @@ export default function NeoMediaKeyVSL({
 
   return (
     <div
-      className="relative w-full aspect-video overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl cursor-pointer"
+      className="relative w-full aspect-video overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl cursor-pointer "
       onClick={togglePlay}
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
