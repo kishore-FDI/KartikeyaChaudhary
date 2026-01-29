@@ -99,7 +99,7 @@ export default function NeoMediaKeyVSL({
         loop
         poster={posterSrc}
       >
-        {/* <source src={videoSrc} type="video/mp4" /> */}
+        <source src={videoSrc} type="video/mp4" />
       </video>
 
       <div
