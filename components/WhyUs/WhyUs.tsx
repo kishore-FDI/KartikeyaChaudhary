@@ -12,7 +12,7 @@ export default function WhyUs({ t1Ref, t2Ref, progressRef }: Props) {
     <section className="min-h-screen bg-white px-6 md:px-24" id="whyus">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-20 items-center min-h-screen">
         <div className="md:col-span-5 font-poppins font-semibold text-black
-                        text-5xl md:text-7xl lg:text-8xl leading-[1.05] 
+                        text-5xl md:text-[4vw] lg:text-[6vw] leading-[1.05] 
                         flex flex-col justify-end md:justify-center h-full">
           <span className="block ">
             <span className="headline-line block">Content,</span>
@@ -22,7 +22,7 @@ export default function WhyUs({ t1Ref, t2Ref, progressRef }: Props) {
           </span>
         </div>
 
-        <div className="md:col-span-7 space-y-12 max-w-xl">
+        <div className="lg:col-span-7 md:col-span-10 space-y-12 max-w-xl">
           <div
             className="relative min-h-20 md:min-h-30
                       font-manrope text-lg md:text-xl
