@@ -168,7 +168,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=320%",
+          end: "+=300%",
           scrub: true,
           pin: true,
           onUpdate: self => {
@@ -213,7 +213,7 @@ export default function Home() {
           {
             width: "100%",
             ease: "none",
-            duration: 1.5,
+            duration: 1.2,
           },
           1
         )
@@ -227,15 +227,10 @@ export default function Home() {
       <div ref={heroRef} className="relative z-10">
         <Hero />
       </div>
-
-      <div ref={whyRef}>
+      <div ref={whyRef} className="pointer-events-none">
         <WhyUs t1Ref={t1Ref} t2Ref={t2Ref} progressRef={progressRef} />
       </div>
-
-
       <canvas ref={canvasRef} className="fixed inset-0 z-50 pointer-events-none" />
-
-
       <Short />
     </main>
   )
