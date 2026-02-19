@@ -27,7 +27,7 @@ export default function ShortsVideoPlayer({ videoSrc, posterSrc }: Props) {
     if (!v) return;
 
     v.muted = true;
-    v.play().catch(() => {});
+    v.play().catch(() => { });
     const t = setTimeout(() => setShowMutedTip(false), 2000);
 
     let prevMuted = true;
@@ -71,7 +71,7 @@ export default function ShortsVideoPlayer({ videoSrc, posterSrc }: Props) {
     if (!v) return;
 
     if (v.paused) {
-      v.play().catch(() => {});
+      v.play().catch(() => { });
       setPaused(false);
     } else {
       v.pause();
@@ -98,7 +98,7 @@ export default function ShortsVideoPlayer({ videoSrc, posterSrc }: Props) {
     // ensure user gesture activates audio if needed
     if (!newMuted) {
       // attempt to resume playback to satisfy autoplay/user-gesture policies
-      v.play().catch(() => {});
+      v.play().catch(() => { });
     }
   };
 
@@ -112,7 +112,7 @@ export default function ShortsVideoPlayer({ videoSrc, posterSrc }: Props) {
       <video
         ref={ref}
         className="w-full h-full object-cover"
-        // src={videoSrc}
+        src={videoSrc}
         poster={posterSrc}
         playsInline
         loop
@@ -133,9 +133,8 @@ export default function ShortsVideoPlayer({ videoSrc, posterSrc }: Props) {
           onClick={toggleMute}
           title={muted ? "Audio muted — click to unmute" : "Audio on — click to mute"}
           aria-label={muted ? "Unmute video" : "Mute video"}
-          className={`bg-black/60 p-3 rounded-full transition-opacity ${
-            hover || muted ? "opacity-100" : "opacity-0"
-          }`}
+          className={`bg-black/60 p-3 rounded-full transition-opacity ${hover || muted ? "opacity-100" : "opacity-0"
+            }`}
           // ensure the button itself doesn't allow the parent onClick to run
           onMouseDown={(e) => e.stopPropagation()}
         >
