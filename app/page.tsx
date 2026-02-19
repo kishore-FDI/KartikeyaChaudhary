@@ -6,7 +6,12 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Hero from "@/components/Hero/Hero"
 import WhyUs from "@/components/WhyUs/WhyUs"
+import HowItWorks from "@/components/HowItWorks/HowItWorks"
+import WhyWorkWithUs from "@/components/WhyWorkWithUs/WhyWorkWithUs"
 import Short from "@/components/Shorts/Short"
+import Stories from "@/components/Stories/Stories"
+import CTA from "@/components/CTA/CTA"
+import Footer from "@/components/Footer/Footer"
 import { vertexShader, fragmentShader } from "@/lib/shader"
 import * as THREE from "three"
 import { SHADERCONFIG } from "@/lib/consts"
@@ -231,7 +236,12 @@ export default function Home() {
         <WhyUs t1Ref={t1Ref} t2Ref={t2Ref} progressRef={progressRef} />
       </div>
       <canvas ref={canvasRef} className="fixed inset-0 z-50 pointer-events-none" />
+      <HowItWorks />
+      <WhyWorkWithUs />
       <Short />
+      <Stories />
+      <CTA />
+      <Footer />
     </main>
   )
 }

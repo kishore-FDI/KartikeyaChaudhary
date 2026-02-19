@@ -112,7 +112,7 @@ export default function ShortsVideoPlayer({ videoSrc, posterSrc }: Props) {
       <video
         ref={ref}
         className="w-full h-full object-cover"
-        src={videoSrc}
+        // src={videoSrc}
         poster={posterSrc}
         playsInline
         loop
