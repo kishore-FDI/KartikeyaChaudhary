@@ -47,7 +47,7 @@ void main() {
   float aspect = uResolution.x / uResolution.y;
   vec2 centeredUv = (uv - 0.5) * vec2(aspect, 1.0);
 
-  float dissolveEdge = uv.y - uProgress * 3.0;
+  float dissolveEdge = uv.y - uProgress * 15.0;
   float noiseValue = fbm(centeredUv * 15.0);
   float d = dissolveEdge + noiseValue * uSpread;
 
