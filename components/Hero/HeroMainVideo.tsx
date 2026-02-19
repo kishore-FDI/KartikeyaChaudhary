@@ -99,13 +99,12 @@ export default function NeoMediaKeyVSL({
         loop
         poster={posterSrc}
       >
-        {/* <source src={videoSrc} type="video/mp4" /> */}
+        <source src={videoSrc} type="video/mp4" />
       </video>
 
       <div
-        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-          paused ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${paused ? "opacity-100" : "opacity-0"
+          }`}
       >
         <div className="bg-black/60 p-3 sm:p-4 rounded-full">
           <Pause className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
@@ -118,9 +117,8 @@ export default function NeoMediaKeyVSL({
             <Tooltip.Trigger asChild>
               <button
                 onClick={toggleMute}
-                className={`bg-black/60 p-2 sm:p-3 rounded-full transition-opacity duration-300 ${
-                  showControls || muted ? "opacity-100" : "opacity-0"
-                }`}
+                className={`bg-black/60 p-2 sm:p-3 rounded-full transition-opacity duration-300 ${showControls || muted ? "opacity-100" : "opacity-0"
+                  }`}
               >
                 {muted ? (
                   <Music2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
